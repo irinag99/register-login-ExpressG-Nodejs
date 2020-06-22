@@ -1,0 +1,15 @@
+    <header>
+        <% if (locals.user) { %>
+        <ul>
+            <li> Mis compras </li>
+            <li>
+                <form action="/users/logout" method="post">
+                <button type="submit">Cerrar sesion</button>
+            </form>
+            </li>
+        </ul>
+        <% } else { %>
+        <li> <a href="/users/register">Registrarme</a> </li>
+        <li> <a href="/users/login">Login</a> </li>
+        <% } %>
+    </header>

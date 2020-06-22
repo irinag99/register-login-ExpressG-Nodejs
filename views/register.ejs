@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('./head') %> 
+<body>
+    <%- include('./header') %>
+    <% if (typeof errors != 'undefined') { %>
+     <p> Error </p>
+     <ul>
+         <% for( let i = 0; i < errors.length; i++ ) { %>
+         <li>
+             <%= errors[i].msg %> 
+         </li>
+         <% } %>
+     </ul>
+    <% } %>
+    <form action="/users/register" method="POST">
+    <label for="">Nombre</label>
+    <input type="text" name="nombre"> <br>
+
+    <label for="">Email</label>
+    <input type="email" name="email"> <br>
+
+    <label for="">Password</label>
+    <input type="password" name="password"> <br>
+
+    <label for="">Repeat password</label>
+    <input type="password" name="retype"> <br>
+
+    <button type="submit">Registrarme</button>
+</form>
+<%- include('./footer') %> 
+</body>
+</html>

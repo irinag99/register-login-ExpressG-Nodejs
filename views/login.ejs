@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./head') %>
+<body>
+    <%- include('./header') %>
+    <div class="conitainer-fluid">
+        <form action="/users/login" method="post">
+
+            <label for="">Email</label>
+            <input type="email" name="email"> <br>
+        
+            <label for="">Password</label>
+            <input type="password" name="password"> <br>
+        
+            <button type="submit">Login</button>
+        
+            <label for="">Recuerdame</label>
+            <input type="checkbox" name="remember" id="remember">
+        </form>
+    </div>
+<%- include('./footer') %>
+</body>
+</html>
